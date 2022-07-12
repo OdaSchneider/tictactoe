@@ -35,13 +35,16 @@ td:hover{
 .playerPanel{
     display: flex;
     font-size: 42px;
-    margin: 60px;
 }
 
 .playerPanel div{
     display: flex;
     align-items: center;
-    margin: 20px;
+    margin: 32px;
+    border: 1px solid white;
+    border-radius: 3%;
+    background-color: darkslategrey;
+    padding: 16px;
 }
 
 .playerPanel img{
@@ -55,14 +58,27 @@ td:hover{
     opacity: 0.5;
 }
 
+.restart{
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.restart img{
+    margin: 8px;
+    cursor: pointer;
+}
+
 .playingField{
     position: relative;
+    margin: 60px;
+    margin-bottom: 150px;
 }
 
 .horizontalLine{
     height: 8px;
     width: 430px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0.6);
     position: absolute;
     transform: scaleX(0.0);
     transition: transform 225ms ease-in-out;
