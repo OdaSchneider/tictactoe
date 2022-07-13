@@ -34,14 +34,11 @@ function draw() {
 
 function checkWin() {
     let winner;
-
-    checkHorizontal(winner);
-    checkVertical(winner);
-    checkDiagonal(winner);
+    startCheckList(winner);
 }
 
 
-function checkHorizontal(winner){
+function startCheckList(winner){
     if (fields[0] == fields[1] && fields[1] == fields[2] && fields[0]) {
         winner = fields[0];
         animationWinnerOption1();
@@ -54,8 +51,12 @@ function checkHorizontal(winner){
         winner = fields[6];
         animationWinnerOption3();
     }
-    checkforContinue(winner);
-    returnResult(winner);
+
+    if(winner){
+        returnResult(winner);
+    }else{
+        checkVertical(winner);
+    }
 }
 
 
@@ -72,8 +73,12 @@ function checkVertical(winner){
         winner = fields[2];
         animationWinnerOption6();
     }
-    checkforContinue(winner);
-    returnResult(winner);
+
+    if(winner){
+        returnResult(winner);
+    }else{
+        checkDiagonal(winner);
+    }
 }
 
 
@@ -86,8 +91,12 @@ function checkDiagonal(winner){
         winner = fields[2];
         animationWinnerOption8();
     }
-    checkforContinue(winner);
-    returnResult(winner);
+
+    if(winner){
+        returnResult(winner);
+    }else{
+        checkforContinue(winner);
+    }
 }
 
 
