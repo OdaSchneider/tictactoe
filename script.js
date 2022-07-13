@@ -93,12 +93,12 @@ function checkDiagonal(winner){
 
 function checkforContinue(winner){
     if(!winner && fields[0] && fields[1] && fields[2] && fields[3] && fields[4] && fields[5] && fields[6] && fields[7] && fields[8]){
-        returnResultEqual(winner);
+        returnResultEqual();
     }
 }
 
 
-function returnResultEqual(winner){
+function returnResultEqual(){
     gameOver = true;
     document.getElementById('dialog').innerHTML= `<b>GAME OVER</b><br><span>There is no winner in this round`;
     animateEndScreen();

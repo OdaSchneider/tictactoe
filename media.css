@@ -1,0 +1,132 @@
+
+@media(max-width: 1024px) {
+    tr {
+        width: 300px;
+    }
+
+    td {
+        width: 100px;
+        height: 100px;
+    }
+
+    .shapes img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .horizontalLine {
+        width: 285px;
+    }
+
+    #line6, #line7  {
+        width: 405px !important;
+    }
+
+    .playerPanel {
+        font-size: 24px;
+    }
+
+    .playerPanel img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .restart {
+        font-size: 16px;
+    }
+
+    .dialog{
+        height: 40%;
+        bottom: 18%;
+        text-align: center;
+    }
+}
+
+@media(max-width: 385px) {
+    .horizontalLine {
+        width: 240px;
+    }
+
+    #line0, #line1, #line2, #line3{
+        left: 11% !important;
+    }
+
+    #line4{
+        left: -22% !important;
+    }
+
+    #line5{
+        left: 45% !important;
+    }
+
+    #line6 {
+        width: 338px !important;
+        left: -9px !important
+    }
+
+    #line7{
+        width: 338px !important;
+        left: -11px !important
+    }
+
+    .playerPanel {
+        margin-bottom: 16px;
+        font-size: 20px;
+    }
+
+    .playerPanel div {
+       margin: 8px;
+    }
+
+    .restart {
+        font-size: 14px;
+        margin-bottom: 16px;
+    }
+
+    .dialog{
+        padding: 16px;
+    }
+
+}
+
+@media(max-width: 375px){
+    .horizontalLine {
+        width: 200px;
+    }
+
+    #line0, #line1, #line2, #line3{
+        left: 17% !important;
+    }
+
+    #line4{
+        left: -16% !important;
+    }
+
+    #line5{
+        left: 51% !important;
+    }
+
+    #line6, #line7 {
+        width: 310px !important;
+        left: 0px !important
+    }
+
+    .dialog{
+        font-size: 44px;
+    }
+
+    .dialog span{
+        font-size: 22px;
+    }
+}
+
+@media(max-width: 365px){
+    .shapes img {
+        width: 50px;
+        height: 50px;
+    }
+
+    #line0, #line1, #line2, #line3, #line4, #line5, #line6, #line7{
+        display: none !important;
+    }
+}

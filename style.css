@@ -17,13 +17,13 @@ table {
 }
 
 tr {
-    width: 600px;
+    width: 400px;
 }
 
 td{
     position: relative;
-    width: 200px;
-    height: 200px;
+    width: 133px;
+    height: 133px;
     border: 5px solid whitesmoke; 
     cursor: pointer;
 }
@@ -38,24 +38,24 @@ td:hover{
 
 .playerPanel{
     display: flex;
-    font-size: 42px;
+    font-size: 30px;
 }
 
 .playerPanel div{
     display: flex;
     align-items: center;
-    margin: 32px;
+    margin: 16px 32px;
     border: 1px solid white;
     border-radius: 3%;
     background-color: darkslategrey;
-    padding: 16px;
+    padding: 8px;
 }
 
 .playerPanel img{
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
     object-fit: contain;
-    margin: 8px;
+    margin-right: 8px;
 }
 
 .playerInactive{
@@ -65,12 +65,12 @@ td:hover{
 .restart{
     display: flex;
     align-items: center;
-    margin-bottom: 50px;
+    margin-bottom: 32px;
     background-color: rgba(0, 0, 0, 0.3);
     border-radius: 10%;
     color: white;
     font-family: 'Neucha', cursive;
-    font-size: 32px;
+    font-size: 20px;
     padding: 8px;
 }
 
@@ -80,18 +80,17 @@ td:hover{
 }
 
 .restart img{
-    margin: 8px;
+    margin-right: 8px;
 }
 
 .playingField{
     position: relative;
-    margin: 60px;
-    margin-bottom: 150px;
+    margin: 32px;
 }
 
 .horizontalLine{
-    height: 8px;
-    width: 430px;
+    height: 5px;
+    width: 380px;
     background-color: rgba(255, 255, 255, 0.6);
     position: absolute;
     transform: scaleX(0.0);
@@ -115,25 +114,25 @@ td:hover{
 }
 
 .dialog {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.95);
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 12%;
-    height: 60%;
+    bottom: 25%;
+    height: 30%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-family: 'Audiowide', cursive;
-    font-size: 160px;
+    font-size: 54px;
     animation: zoomIn 225ms ease-in-out;
     color: white;
 }
 
 .dialog span{
-    font-size: 60px;
-    color: rgb(207, 0, 0);
+    font-size: 28px;
+    color: rgb(209, 2, 64);
 }
 
 @keyframes zoomIn {
