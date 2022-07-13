@@ -35,9 +35,9 @@ function draw() {
 function checkWin() {
     let winner;
 
-    checkHorizontal(winner)
-    checkVertical(winner)
-    checkDiagonal(winner)
+    checkHorizontal(winner);
+    checkVertical(winner);
+    checkDiagonal(winner);
 }
 
 
@@ -54,6 +54,7 @@ function checkHorizontal(winner){
         winner = fields[6];
         animationWinnerOption3();
     }
+    checkforContinue(winner);
     returnResult(winner);
 }
 
@@ -71,6 +72,7 @@ function checkVertical(winner){
         winner = fields[2];
         animationWinnerOption6();
     }
+    checkforContinue(winner);
     returnResult(winner);
 }
 
@@ -84,18 +86,56 @@ function checkDiagonal(winner){
         winner = fields[2];
         animationWinnerOption8();
     }
+    checkforContinue(winner);
     returnResult(winner);
+}
+
+
+function checkforContinue(winner){
+    if(!winner && fields[0] && fields[1] && fields[2] && fields[3] && fields[4] && fields[5] && fields[6] && fields[7] && fields[8]){
+        returnResultEqual(winner);
+    }
+}
+
+
+function returnResultEqual(winner){
+    gameOver = true;
+    document.getElementById('dialog').innerHTML= `<b>GAME OVER</b><br><span>There is no winner in this round`;
+    animateEndScreen();
 }
 
 
 function returnResult(winner){
     if (winner) {
         gameOver = true;
+        determineWinner(winner);
     }
 }
 
 
+function determineWinner(winner){
+    let winnerName;
+
+    if(winner == 'circle'){
+        winnerName = 'Player 1';
+    }else{
+        winnerName = 'Player 2';
+    }
+    document.getElementById('dialog').innerHTML= `<b>Good Game</b><br><span>The winner is ${winnerName}`;
+    animateEndScreen();
+}
+
+
+function animateEndScreen(){
+    document.getElementById('dialog').classList.remove('d-none');
+    document.getElementById('player1').classList.add('playerInactive');
+    document.getElementById('player2').classList.add('playerInactive');
+}
+
+
 function restart() {
+    resetElements();
+
     for (let i = 0; i < 9; i++) {
         document.getElementById('field' + i).innerHTML = '';
         document.getElementById('cell' + i).style.backgroundColor = 'unset';
@@ -103,8 +143,15 @@ function restart() {
     for (let i = 0; i < 8; i++) {
         document.getElementById('line' + i).style.transform = 'scaleX(0)';
     }
+}
+
+
+function resetElements(){
     fields = [];
     gameOver = false;
+    currentShape = 'cross';
+    document.getElementById('dialog').classList.add('d-none');
+    document.getElementById('player1').classList.remove('playerInactive');
 }
 
 

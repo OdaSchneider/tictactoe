@@ -32,6 +32,10 @@ td:hover{
     background-color: rgba(240, 240, 240, 0.3);
 }
 
+.d-none{
+    display: none !important;
+}
+
 .playerPanel{
     display: flex;
     font-size: 42px;
@@ -62,11 +66,21 @@ td:hover{
     display: flex;
     align-items: center;
     margin-bottom: 50px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10%;
+    color: white;
+    font-family: 'Neucha', cursive;
+    font-size: 32px;
+    padding: 8px;
+}
+
+.restart:hover{
+    background-color: rgba(4, 49, 49, 0.5);
+    cursor: pointer;
 }
 
 .restart img{
     margin: 8px;
-    cursor: pointer;
 }
 
 .playingField{
@@ -100,6 +114,36 @@ td:hover{
     height: 80px;
 }
 
-.d-none{
-    display: none;
+.dialog {
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 12%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Audiowide', cursive;
+    font-size: 160px;
+    animation: zoomIn 225ms ease-in-out;
+    color: white;
 }
+
+.dialog span{
+    font-size: 60px;
+    color: rgb(207, 0, 0);
+}
+
+@keyframes zoomIn {
+    from{
+        opacity: 0;
+        transform: scale(0);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
