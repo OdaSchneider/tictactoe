@@ -136,9 +136,11 @@ function determineWinner(winner){
 
 
 function animateEndScreen(){
-    document.getElementById('dialog').classList.remove('d-none');
-    document.getElementById('player1').classList.add('playerInactive');
-    document.getElementById('player2').classList.add('playerInactive');
+    setTimeout(()=>{
+        document.getElementById('dialog').classList.remove('d-none');
+        document.getElementById('player1').classList.add('playerInactive');
+        document.getElementById('player2').classList.add('playerInactive');
+    },1000);
 }
 
 
